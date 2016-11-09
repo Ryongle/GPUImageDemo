@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="YUM-RQ-f24" userLabel="亮度">
+                                <rect key="frame" x="18" y="550" width="564" height="31"/>
+                                <connections>
+                                    <action selector="sliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="a0b-br-ABx"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="sDu-I1-FTt" userLabel="曝光度">
+                                <rect key="frame" x="18" y="512" width="564" height="31"/>
+                                <connections>
+                                    <action selector="sliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="IPT-3m-a45"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Uqm-Zm-jMn" userLabel="高斯模糊">
+                                <rect key="frame" x="18" y="474" width="564" height="31"/>
+                                <connections>
+                                    <action selector="sliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="9Yt-iJ-RoW"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Uqm-Zm-jMn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="1eS-04-zqA"/>
+                            <constraint firstAttribute="trailing" secondItem="Uqm-Zm-jMn" secondAttribute="trailing" constant="20" id="9Kx-a6-ceP"/>
+                            <constraint firstItem="YUM-RQ-f24" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Gjd-tG-jGf"/>
+                            <constraint firstItem="sDu-I1-FTt" firstAttribute="top" secondItem="Uqm-Zm-jMn" secondAttribute="bottom" constant="8" id="Lxr-7s-ew4"/>
+                            <constraint firstItem="YUM-RQ-f24" firstAttribute="top" secondItem="sDu-I1-FTt" secondAttribute="bottom" constant="8" id="TP0-5d-wit"/>
+                            <constraint firstAttribute="trailing" secondItem="YUM-RQ-f24" secondAttribute="trailing" constant="20" id="ZPk-4M-YZ4"/>
+                            <constraint firstAttribute="trailing" secondItem="sDu-I1-FTt" secondAttribute="trailing" constant="20" id="mRf-NF-hDK"/>
+                            <constraint firstItem="sDu-I1-FTt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="qTn-ys-sfZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YUM-RQ-f24" secondAttribute="bottom" constant="20" id="swv-Wh-O5x"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="slider1" destination="YUM-RQ-f24" id="hJB-Rr-hFv"/>
+                        <outlet property="slider2" destination="sDu-I1-FTt" id="jhn-z6-9WB"/>
+                        <outlet property="slider3" destination="Uqm-Zm-jMn" id="DZL-My-Je1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
